@@ -1,22 +1,49 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_point.h                                         :+:      :+:    :+:   */
+/*   my_lib.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tsignore <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/07/20 17:46:58 by tsignore          #+#    #+#             */
-/*   Updated: 2020/07/20 17:59:35 by tsignore         ###   ########.fr       */
+/*   Created: 2020/07/20 15:03:55 by tsignore          #+#    #+#             */
+/*   Updated: 2020/07/20 15:07:34 by tsignore         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_POINT_H
-# define FT_POINT_H
+#include "my_lib.h"
 
-typedef struct	s_point
+void	ft_putchar(char c)
 {
-	int x;
-	int y;
-}				t_point;
+	write(1, &c, 1);
+}
 
-#endif
+void	ft_putstr(char *str)
+{
+	int i;
+
+	i = 0;
+	while (str[i])
+	{
+		ft_putchar(str[i]);
+		i++;
+	}
+}
+
+void	ft_putnbr(int nb)
+{
+	long int n;
+
+	n = nb;
+	if (n < 0)
+	{
+		n *= -1;
+		ft_putchar('-');
+	}
+	if (n >= 10)
+	{
+		ft_putnbr(n / 10);
+		ft_putchar(n % 10 + '0');
+	}
+	else if (n < 10)
+		ft_putchar(n + '0');
+}

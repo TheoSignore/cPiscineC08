@@ -1,22 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_point.h                                         :+:      :+:    :+:   */
+/*   my_lib.h                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tsignore <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/07/20 17:46:58 by tsignore          #+#    #+#             */
-/*   Updated: 2020/07/20 17:59:35 by tsignore         ###   ########.fr       */
+/*   Created: 2020/07/20 14:57:11 by tsignore          #+#    #+#             */
+/*   Updated: 2020/07/20 15:07:43 by tsignore         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_POINT_H
-# define FT_POINT_H
+#ifndef MY_LIB_H
+# define MY_LIB_H
+# include <unistd.h>
 
-typedef struct	s_point
-{
-	int x;
-	int y;
-}				t_point;
+void	ft_putchar(char c);
+void	ft_putstr(char *str);
+void	ft_putnbr(int nb);
 
 #endif
