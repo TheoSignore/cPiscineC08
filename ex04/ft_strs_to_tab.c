@@ -6,12 +6,11 @@
 /*   By: tsignore <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/20 18:00:02 by tsignore          #+#    #+#             */
-/*   Updated: 2020/07/20 19:11:29 by tsignore         ###   ########.fr       */
+/*   Updated: 2020/07/22 09:20:27 by tsignore         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_stock_str.h"
-#include "my_lib.h"
 #include <stdlib.h>
 
 int					ft_strlen(char *str)
